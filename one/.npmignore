@@ -1,0 +1,6 @@
+node_modules/
+!node_modules/nodemailer/
+!node_modules/express/
+!node_modules/cors/
+!node_modules/dotenv/
+dist/
