@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+
+body {
+    background-color: #000;
+    color: #00ff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.terminal {
+    background-color: #0a0a0a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+.terminal-header {
+    background-color: #1a1a1a;
+    padding: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.red { background-color: #ff5f56; }
+.yellow { background-color: #ffbd2e; }
+.green { background-color: #27c93f; }
+
+.terminal-content {
+    padding: 30px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.datetime {
+    margin-bottom: 25px;
+    font-size: 0.9em;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.info-text {
+    color: #00ff00;
+    text-align: center;
+    margin: 15px 0;
+    font-size: 0.9em;
+}
+
+#verificationCode {
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.countdown {
+    color: #00ff00;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+
+/* Animação para o container de verificação */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#verificationContainer {
+    animation: fadeIn 0.5s ease;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+input {
+    background-color: #1a1a1a;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    padding: 12px;
+    border-radius: 4px;
+    outline: none;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #00ff00;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.auth-button {
+    background-color: transparent;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.auth-button:hover {
+    background-color: #00ff00;
+    color: #000;
+}
+
+.links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.terminal-link {
+    color: #00ff00;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.terminal-link:hover {
+    opacity: 1;
+}
+
+.status-message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.status-message.error {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: #ff0000;
+}
+
+.status-message.success {
+    background-color: rgba(0, 255, 0, 0.2);
+}
+
+@media (max-width: 480px) {
+    .terminal {
+        margin: 10px;
+    }
+    
+    .terminal-content {
+        padding: 20px;
+    }
+    
+    input {
+        font-size: 14px;
+    }
+}
